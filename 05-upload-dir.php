@@ -12,3 +12,13 @@ $localDir = '/Users/jamie/jekyll-blog/_site';
 
 // Upload it!
 $container->uploadDirectory($localDir);
+
+/**
+ * BONUS ACTIVITY
+ *
+ * 1. What role do MD5 checksums play here? Try changing a local 
+ *    file content and re-executing this operation. 
+ *
+ * 2. Try turning on HTTP logging so that you can see *all*
+ *    the network traffic for your operations.
+ */
