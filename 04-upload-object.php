@@ -3,18 +3,19 @@
 include '00-auth.php';
 
 // What is the name of your container?
-$containerName = '';
+$containerName = 'test_3';
 
 $container = $swift->getContainer($containerName);
 
 // What file are you trying to upload?
-$localPath  = '/Users/jamie/Documents/foo.txt';
+$localPath  = 'asset/records.xml';
 
 // What do you want this file to be called on the API?
-$remoteName = 'my_document.txt';
+$remoteName = 'you_shall_not_pass';
 
 // Upload it!
-$container->uploadObject($remoteName, fopen($localPath, 'r+'));
+$headers = array('Content-Type' => 'text/plain');
+$container->uploadObject($remoteName, fopen($localPath, 'r+'), $headers);
 
 /**
  * BONUS ACTIVITY

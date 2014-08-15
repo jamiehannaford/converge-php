@@ -2,16 +2,21 @@
 
 include '00-auth.php';
 
+$containerName = 'test_3';
+$container = $swift->getContainer($containerName);
+
+// TASK: upload an index.html file
+$container->uploadObject('index.html', fopen('asset/index.html', 'r+'));
+
+// TAKE: upload an error files
+$container->uploadObject('error.html', fopen('asset/401error.html', 'r+'));
+$container->uploadObject('error.html', fopen('asset/404error.html', 'r+'));
+
 // We first need to enable public access to our private container
 $container->enableCdn();
 
-
 // Now tell the API to treat this file as the landing page
-$container->setStaticIndexPage($indexFile);
-
-
-// Activity: create an error html file locally, and then upload it to your container
-
+$container->setStaticIndexPage('index.html');
 
 // Finally, tell the API to treat this file as the default error page
 $container->setStaticErrorPage('error.html');
