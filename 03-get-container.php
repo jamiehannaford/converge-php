@@ -2,8 +2,10 @@
 
 include '00-auth.php';
 
+// Select your container name
 $containerName = 'test_3';
 
+// Retrieve the container details
 $container = $swift->getContainer($containerName);
 
 printf("Container name: %s\n", $container->getName());
@@ -13,4 +15,4 @@ printf("Container name: %s\n", $container->getName());
  * to find its URL?
  */
 
-printf("Container URL: %s\n", $container->getUrl());
+//printf("Container URL: %s\n", $container->something());
