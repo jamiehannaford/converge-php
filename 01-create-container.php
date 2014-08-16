@@ -2,6 +2,8 @@
 
 include '00-auth.php';
 
-$containerName = 'my/awesome_converge_container';
+// Select a name!
+$containerName = 'awesome_converge_container';
 
+// Create it!
 $swift->createContainer($containerName);
