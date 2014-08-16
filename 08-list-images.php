@@ -14,6 +14,8 @@ foreach ($objects as $object) {
   }
 
   $tempUrl = $object->getTemporaryUrl(3600, 'GET');
-  echo '<img src="' . $url . '" />';
-  echo '<img src="' . $tempUrl . '" />';
+  echo '<div>';
+  echo 'Normal: <img src="' . $url . '" />';
+  echo 'Private: <img src="' . $tempUrl . '" />';
+  echo '</div>';
 }
