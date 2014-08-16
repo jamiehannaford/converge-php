@@ -6,11 +6,10 @@ $containerName = 'test_3';
 $container = $swift->getContainer($containerName);
 
 // TASK: upload an index.html file
-$container->uploadObject('index.html', fopen('asset/index.html', 'r+'));
 
-// TAKE: upload an error files
-$container->uploadObject('error.html', fopen('asset/401error.html', 'r+'));
-$container->uploadObject('error.html', fopen('asset/404error.html', 'r+'));
+
+// TASK: upload an error files
+
 
 // We first need to enable public access to our private container
 $container->enableCdn();
