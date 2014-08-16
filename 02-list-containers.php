@@ -13,7 +13,7 @@ foreach ($containers as $container) {
 }
 
 /**
- * BONUS POINTS:
+ * BONUS POINTS
  *
  * See the $params array above? Try experimenting with it 
  * to filter results. Supported params are:
