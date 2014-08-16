@@ -2,7 +2,10 @@
 
 include '00-auth.php';
 
+// Container name
 $containerName = 'test_3';
+
+// Get container details!
 $container = $swift->getContainer($containerName);
 
 // Temp URL
